@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Title</key>
+	<string>Play Settings</string>
+	<key>StringsTable</key>
+	<string>Play</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Stream URL</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Key</key>
+			<string>input_url</string>
+			<key>DefaultValue</key>
+			<string>rtmp://</string>
+			<key>KeyboardType</key>
+			<string>URL</string>
+		</dict>
+		<dict>
+			<key>Key</key>
+			<string>StartPlayAction</string>
+			<key>Title</key>
+			<string>Start Play</string>
+			<key>Type</key>
+			<string>IASKButtonSpecifier</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Advanced features</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Key</key>
+			<string>play_buffertime</string>
+			<key>DefaultValue</key>
+			<integer>300</integer>
+			<key>Title</key>
+			<string>BufferTime</string>
+			<key>KeyboardType</key>
+			<string>NumberPad</string>
+			<key>IASKTextAlignment</key>
+			<string>IASKUITextAlignmentRight</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Key</key>
+			<string>play_maxbuffertime</string>
+			<key>DefaultValue</key>
+			<integer>1000</integer>
+			<key>Title</key>
+			<string>MaxBufferTime</string>
+			<key>KeyboardType</key>
+			<string>NumberPad</string>
+			<key>IASKTextAlignment</key>
+			<string>IASKUITextAlignmentRight</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Video scale Mode</string>
+			<key>Key</key>
+			<string>video_scale_mode</string>
+			<key>DefaultValue</key>
+			<integer>1</integer>
+			<key>Titles</key>
+			<array>
+				<string>ScaleToFill</string>
+				<string>ScaleAspectFit</string>
+				<string>ScaleAspectFill</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+		</dict>
+        <dict>
+            <key>Type</key>
+            <string>PSToggleSwitchSpecifier</string>
+            <key>Key</key>
+            <string>play_hw</string>
+            <key>DefaultValue</key>
+            <true/>
+            <key>Title</key>
+            <string>Auto Hardware Acceleration</string>
+        </dict>
+	</array>
+</dict>
+</plist>

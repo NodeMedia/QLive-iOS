@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		109F6661AB711A4F0D2AF9B2 /* libPods-QLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1834BFAE2EBA9468B1C70A32 /* libPods-QLive.a */; };
+		9D242C341FD78786009F261B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D242C361FD78786009F261B /* InfoPlist.strings */; };
+		9D242C3B1FD790BA009F261B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D242C3D1FD790BA009F261B /* Localizable.strings */; };
+		9D242C421FD79727009F261B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D242C411FD79727009F261B /* logo.png */; };
+		9D2D9E3A1FD6716E00C1D45D /* AboutSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D9E391FD6716E00C1D45D /* AboutSettingsViewController.m */; };
+		9DA8881F1FC71D6100EAB3D4 /* LivePushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8881E1FC71D6100EAB3D4 /* LivePushViewController.m */; };
+		9DA888231FC7206F00EAB3D4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA888221FC7206F00EAB3D4 /* libz.tbd */; };
+		9DAC0F961FC7A69600A7A307 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC0F951FC7A69600A7A307 /* MainViewController.m */; };
+		9DAC0F991FC7C49600A7A307 /* ConvSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC0F981FC7C49600A7A307 /* ConvSettingsViewController.m */; };
+		9DAC0F9C1FC800CF00A7A307 /* LivePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC0F9B1FC800CF00A7A307 /* LivePlayViewController.m */; };
+		9DB300C31FC6B875007EA3C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB300C21FC6B875007EA3C1 /* AppDelegate.m */; };
+		9DB300CC1FC6B875007EA3C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB300CA1FC6B875007EA3C1 /* Main.storyboard */; };
+		9DB300CE1FC6B875007EA3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB300CD1FC6B875007EA3C1 /* Assets.xcassets */; };
+		9DB300D11FC6B875007EA3C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB300CF1FC6B875007EA3C1 /* LaunchScreen.storyboard */; };
+		9DB300D41FC6B875007EA3C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB300D31FC6B875007EA3C1 /* main.m */; };
+		9DFF1FF61FC6D712008AC4D9 /* PushSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFF1FF51FC6D712008AC4D9 /* PushSettingsViewController.m */; };
+		9DFF1FF81FC6E569008AC4D9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DFF1FF71FC6E569008AC4D9 /* Settings.bundle */; };
+		9DFF20011FC6F7F5008AC4D9 /* PlaySettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFF20001FC6F7F5008AC4D9 /* PlaySettingsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1834BFAE2EBA9468B1C70A32 /* libPods-QLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6BF3EE1420A82E411F60CD /* Pods-QLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-QLive/Pods-QLive.release.xcconfig"; sourceTree = "<group>"; };
+		9D242C2A1FD77F02009F261B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		9D242C351FD78786009F261B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		9D242C371FD787B3009F261B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9D242C3C1FD790BA009F261B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9D242C3E1FD790BC009F261B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9D242C401FD79487009F261B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9D242C411FD79727009F261B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		9D2D9E381FD6716E00C1D45D /* AboutSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutSettingsViewController.h; sourceTree = "<group>"; };
+		9D2D9E391FD6716E00C1D45D /* AboutSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutSettingsViewController.m; sourceTree = "<group>"; };
+		9DA8881D1FC71D6100EAB3D4 /* LivePushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePushViewController.h; sourceTree = "<group>"; };
+		9DA8881E1FC71D6100EAB3D4 /* LivePushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePushViewController.m; sourceTree = "<group>"; };
+		9DA888221FC7206F00EAB3D4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9DAC0F941FC7A69600A7A307 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9DAC0F951FC7A69600A7A307 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9DAC0F971FC7C49600A7A307 /* ConvSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvSettingsViewController.h; sourceTree = "<group>"; };
+		9DAC0F981FC7C49600A7A307 /* ConvSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvSettingsViewController.m; sourceTree = "<group>"; };
+		9DAC0F9A1FC800CF00A7A307 /* LivePlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePlayViewController.h; sourceTree = "<group>"; };
+		9DAC0F9B1FC800CF00A7A307 /* LivePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePlayViewController.m; sourceTree = "<group>"; };
+		9DB300BE1FC6B875007EA3C1 /* QLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DB300C11FC6B875007EA3C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9DB300C21FC6B875007EA3C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9DB300CB1FC6B875007EA3C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9DB300CD1FC6B875007EA3C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DB300D01FC6B875007EA3C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9DB300D21FC6B875007EA3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DB300D31FC6B875007EA3C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9DFF1FF41FC6D712008AC4D9 /* PushSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushSettingsViewController.h; sourceTree = "<group>"; };
+		9DFF1FF51FC6D712008AC4D9 /* PushSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushSettingsViewController.m; sourceTree = "<group>"; };
+		9DFF1FF71FC6E569008AC4D9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		9DFF1FFF1FC6F7F5008AC4D9 /* PlaySettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaySettingsViewController.h; sourceTree = "<group>"; };
+		9DFF20001FC6F7F5008AC4D9 /* PlaySettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaySettingsViewController.m; sourceTree = "<group>"; };
+		F459096420D652C57239C6CD /* Pods-QLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QLive/Pods-QLive.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DB300BB1FC6B875007EA3C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA888231FC7206F00EAB3D4 /* libz.tbd in Frameworks */,
+				109F6661AB711A4F0D2AF9B2 /* libPods-QLive.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9DB300B51FC6B875007EA3C1 = {
+			isa = PBXGroup;
+			children = (
+				9DB300C01FC6B875007EA3C1 /* QLive */,
+				9DB300BF1FC6B875007EA3C1 /* Products */,
+				9DFF1FEF1FC6D600008AC4D9 /* Frameworks */,
+				A58CE7A24EDBDDE36D8C5CAE /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		9DB300BF1FC6B875007EA3C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DB300BE1FC6B875007EA3C1 /* QLive.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DB300C01FC6B875007EA3C1 /* QLive */ = {
+			isa = PBXGroup;
+			children = (
+				9D242C411FD79727009F261B /* logo.png */,
+				9DB300CA1FC6B875007EA3C1 /* Main.storyboard */,
+				9DB300CD1FC6B875007EA3C1 /* Assets.xcassets */,
+				9DB300CF1FC6B875007EA3C1 /* LaunchScreen.storyboard */,
+				9DB300D21FC6B875007EA3C1 /* Info.plist */,
+				9D242C361FD78786009F261B /* InfoPlist.strings */,
+				9D242C3D1FD790BA009F261B /* Localizable.strings */,
+				9DFF1FF71FC6E569008AC4D9 /* Settings.bundle */,
+				9DB300D31FC6B875007EA3C1 /* main.m */,
+				9DB300C11FC6B875007EA3C1 /* AppDelegate.h */,
+				9DB300C21FC6B875007EA3C1 /* AppDelegate.m */,
+				9DAC0F941FC7A69600A7A307 /* MainViewController.h */,
+				9DAC0F951FC7A69600A7A307 /* MainViewController.m */,
+				9DFF1FF41FC6D712008AC4D9 /* PushSettingsViewController.h */,
+				9DFF1FF51FC6D712008AC4D9 /* PushSettingsViewController.m */,
+				9DA8881D1FC71D6100EAB3D4 /* LivePushViewController.h */,
+				9DA8881E1FC71D6100EAB3D4 /* LivePushViewController.m */,
+				9DFF1FFF1FC6F7F5008AC4D9 /* PlaySettingsViewController.h */,
+				9DFF20001FC6F7F5008AC4D9 /* PlaySettingsViewController.m */,
+				9DAC0F9A1FC800CF00A7A307 /* LivePlayViewController.h */,
+				9DAC0F9B1FC800CF00A7A307 /* LivePlayViewController.m */,
+				9DAC0F971FC7C49600A7A307 /* ConvSettingsViewController.h */,
+				9DAC0F981FC7C49600A7A307 /* ConvSettingsViewController.m */,
+				9D2D9E381FD6716E00C1D45D /* AboutSettingsViewController.h */,
+				9D2D9E391FD6716E00C1D45D /* AboutSettingsViewController.m */,
+			);
+			path = QLive;
+			sourceTree = "<group>";
+		};
+		9DFF1FEF1FC6D600008AC4D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DA888221FC7206F00EAB3D4 /* libz.tbd */,
+				1834BFAE2EBA9468B1C70A32 /* libPods-QLive.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A58CE7A24EDBDDE36D8C5CAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F459096420D652C57239C6CD /* Pods-QLive.debug.xcconfig */,
+				5C6BF3EE1420A82E411F60CD /* Pods-QLive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DB300BD1FC6B875007EA3C1 /* QLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DB300D71FC6B875007EA3C1 /* Build configuration list for PBXNativeTarget "QLive" */;
+			buildPhases = (
+				3899A84EB750DD13750C223E /* [CP] Check Pods Manifest.lock */,
+				9DB300BA1FC6B875007EA3C1 /* Sources */,
+				9DB300BB1FC6B875007EA3C1 /* Frameworks */,
+				9DB300BC1FC6B875007EA3C1 /* Resources */,
+				4B973433AD44CCAE575B2CD6 /* [CP] Embed Pods Frameworks */,
+				F431D25BE4AB20B256A3F5FD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QLive;
+			productName = QLive;
+			productReference = 9DB300BE1FC6B875007EA3C1 /* QLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DB300B61FC6B875007EA3C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Mingliang Chen";
+				TargetAttributes = {
+					9DB300BD1FC6B875007EA3C1 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 9DB300B91FC6B875007EA3C1 /* Build configuration list for PBXProject "QLive" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 9DB300B51FC6B875007EA3C1;
+			productRefGroup = 9DB300BF1FC6B875007EA3C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DB300BD1FC6B875007EA3C1 /* QLive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DB300BC1FC6B875007EA3C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DFF1FF81FC6E569008AC4D9 /* Settings.bundle in Resources */,
+				9D242C341FD78786009F261B /* InfoPlist.strings in Resources */,
+				9D242C3B1FD790BA009F261B /* Localizable.strings in Resources */,
+				9DB300D11FC6B875007EA3C1 /* LaunchScreen.storyboard in Resources */,
+				9D242C421FD79727009F261B /* logo.png in Resources */,
+				9DB300CE1FC6B875007EA3C1 /* Assets.xcassets in Resources */,
+				9DB300CC1FC6B875007EA3C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3899A84EB750DD13750C223E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QLive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B973433AD44CCAE575B2CD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QLive/Pods-QLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F431D25BE4AB20B256A3F5FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QLive/Pods-QLive-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/InAppSettingsKit/InAppSettingsKit.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/InAppSettingsKit.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QLive/Pods-QLive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DB300BA1FC6B875007EA3C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAC0F9C1FC800CF00A7A307 /* LivePlayViewController.m in Sources */,
+				9DA8881F1FC71D6100EAB3D4 /* LivePushViewController.m in Sources */,
+				9DAC0F991FC7C49600A7A307 /* ConvSettingsViewController.m in Sources */,
+				9DAC0F961FC7A69600A7A307 /* MainViewController.m in Sources */,
+				9DB300C31FC6B875007EA3C1 /* AppDelegate.m in Sources */,
+				9DFF20011FC6F7F5008AC4D9 /* PlaySettingsViewController.m in Sources */,
+				9D2D9E3A1FD6716E00C1D45D /* AboutSettingsViewController.m in Sources */,
+				9DFF1FF61FC6D712008AC4D9 /* PushSettingsViewController.m in Sources */,
+				9DB300D41FC6B875007EA3C1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9D242C361FD78786009F261B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D242C351FD78786009F261B /* zh-Hans */,
+				9D242C371FD787B3009F261B /* Base */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9D242C3D1FD790BA009F261B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D242C3C1FD790BA009F261B /* en */,
+				9D242C3E1FD790BC009F261B /* zh-Hans */,
+				9D242C401FD79487009F261B /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9DB300CA1FC6B875007EA3C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DB300CB1FC6B875007EA3C1 /* Base */,
+				9D242C2A1FD77F02009F261B /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9DB300CF1FC6B875007EA3C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DB300D01FC6B875007EA3C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9DB300D51FC6B875007EA3C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9DB300D61FC6B875007EA3C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DB300D81FC6B875007EA3C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F459096420D652C57239C6CD /* Pods-QLive.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KH9H8WF8C5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QLive/Frameworks",
+				);
+				INFOPLIST_FILE = QLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QLive",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.klive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DB300D91FC6B875007EA3C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C6BF3EE1420A82E411F60CD /* Pods-QLive.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KH9H8WF8C5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QLive/Frameworks",
+				);
+				INFOPLIST_FILE = QLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QLive",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.klive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DB300B91FC6B875007EA3C1 /* Build configuration list for PBXProject "QLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB300D51FC6B875007EA3C1 /* Debug */,
+				9DB300D61FC6B875007EA3C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DB300D71FC6B875007EA3C1 /* Build configuration list for PBXNativeTarget "QLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB300D81FC6B875007EA3C1 /* Debug */,
+				9DB300D91FC6B875007EA3C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DB300B61FC6B875007EA3C1 /* Project object */;
+}

@@ -1,0 +1,18 @@
+
+/* Class = "UINavigationItem"; title = "Push Settings"; ObjectID = "8L9-ti-liJ"; */
+"8L9-ti-liJ.title" = "Push Settings";
+
+/* Class = "UINavigationItem"; title = "ReStream Settings"; ObjectID = "9fN-xy-8fj"; */
+"9fN-xy-8fj.title" = "ReStream Settings";
+
+/* Class = "UITabBarItem"; title = "Push"; ObjectID = "Elw-2G-l4f"; */
+"Elw-2G-l4f.title" = "Push";
+
+/* Class = "UITabBarItem"; title = "ReStream"; ObjectID = "Fzl-Nb-kLu"; */
+"Fzl-Nb-kLu.title" = "ReStream";
+
+/* Class = "UINavigationItem"; title = "Play Settings"; ObjectID = "Igv-Ws-3Jn"; */
+"Igv-Ws-3Jn.title" = "Play Settings";
+
+/* Class = "UITabBarItem"; title = "Play"; ObjectID = "iTO-iN-Htj"; */
+"iTO-iN-Htj.title" = "Play";

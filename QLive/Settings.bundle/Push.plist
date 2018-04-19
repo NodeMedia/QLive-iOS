@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Title</key>
+	<string>Push Settings</string>
+	<key>StringsTable</key>
+	<string>Push</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Stream URL</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Key</key>
+			<string>output_url</string>
+			<key>DefaultValue</key>
+			<string>rtmp://</string>
+		</dict>
+		<dict>
+			<key>Key</key>
+			<string>StartPushAction</string>
+			<key>Title</key>
+			<string>Start Push</string>
+			<key>Type</key>
+			<string>IASKButtonSpecifier</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Video Settings</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Key</key>
+			<string>camera_postion</string>
+			<key>Titles</key>
+			<array>
+				<string>Back</string>
+				<string>Front</string>
+			</array>
+			<key>Title</key>
+			<string>Camera Postion</string>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<key>DefaultValue</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Key</key>
+			<string>camera_front_mirror</string>
+			<key>DefaultValue</key>
+			<true/>
+			<key>Title</key>
+			<string>Camera Front Mirror</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Key</key>
+			<string>video_orientation</string>
+			<key>Titles</key>
+			<array>
+				<string>Portrait</string>
+				<string>Landscape Right</string>
+				<string>Landscape Left</string>
+			</array>
+			<key>Title</key>
+			<string>Video Orientation</string>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+			<key>DefaultValue</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Key</key>
+			<string>video_front_mirror</string>
+			<key>DefaultValue</key>
+			<false/>
+			<key>Title</key>
+			<string>Video Front Mirror</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Key</key>
+			<string>video_resolution</string>
+			<key>Titles</key>
+			<array>
+				<string>16X9_270</string>
+				<string>16X9_360</string>
+				<string>16X9_480</string>
+				<string>16X9_540</string>
+				<string>16X9_720</string>
+			</array>
+			<key>Title</key>
+			<string>Video Resolution</string>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+			</array>
+			<key>DefaultValue</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Key</key>
+			<string>video_profile</string>
+			<key>Titles</key>
+			<array>
+				<string>H.264 Baseline</string>
+				<string>H.264 Main</string>
+				<string>H.264 High</string>
+			</array>
+			<key>Title</key>
+			<string>Video Profile</string>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+			<key>DefaultValue</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Key</key>
+			<string>vodeo_keyframe_interval</string>
+			<key>Titles</key>
+			<array>
+				<string>1s</string>
+				<string>2s</string>
+				<string>3s</string>
+				<string>4s</string>
+				<string>5s</string>
+			</array>
+			<key>Title</key>
+			<string>Video Keyframe Interval</string>
+			<key>Values</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+			</array>
+			<key>DefaultValue</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Video Bitrate</string>
+			<key>Key</key>
+			<string>video_bitrate</string>
+			<key>DefaultValue</key>
+			<integer>500000</integer>
+			<key>Titles</key>
+			<array>
+				<string>300 kbps</string>
+				<string>500 kbps</string>
+				<string>600 kbps</string>
+				<string>800 kbps</string>
+				<string>1000 kbps</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>300000</integer>
+				<integer>500000</integer>
+				<integer>600000</integer>
+				<integer>800000</integer>
+				<integer>1000000</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Video FPS</string>
+			<key>Key</key>
+			<string>video_fps</string>
+			<key>DefaultValue</key>
+			<integer>20</integer>
+			<key>Titles</key>
+			<array>
+				<string>15 fps</string>
+				<string>20 fps</string>
+				<string>24 fps</string>
+				<string>30 fps</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>15</integer>
+				<integer>20</integer>
+				<integer>24</integer>
+				<integer>30</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Audio Settings</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Audio Profile</string>
+			<key>Key</key>
+			<string>audio_profile</string>
+			<key>DefaultValue</key>
+			<integer>1</integer>
+			<key>Titles</key>
+			<array>
+				<string>LCAAC</string>
+				<string>HEAAC</string>
+				<string>SPEEX</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Audio Bitrate</string>
+			<key>Key</key>
+			<string>audio_bitrate</string>
+			<key>DefaultValue</key>
+			<integer>32000</integer>
+			<key>Titles</key>
+			<array>
+				<string>32 kbps</string>
+				<string>64 kbps</string>
+				<string>128 kbps</string>
+				<string>192 kbps</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>32000</integer>
+				<integer>64000</integer>
+				<integer>128000</integer>
+				<integer>192000</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Audio Samplerate</string>
+			<key>Key</key>
+			<string>audio_samplerate</string>
+			<key>DefaultValue</key>
+			<integer>44100</integer>
+			<key>Titles</key>
+			<array>
+				<string>8kHz</string>
+				<string>16kHz</string>
+				<string>32kHz</string>
+				<string>44.1kHz</string>
+				<string>48kHz</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>8000</integer>
+				<integer>16000</integer>
+				<integer>32000</integer>
+				<integer>44100</integer>
+				<integer>48000</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Advanced features</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Key</key>
+			<string>push_denoise</string>
+			<key>DefaultValue</key>
+			<true/>
+			<key>Title</key>
+			<string>Denoise</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Key</key>
+			<string>push_hw</string>
+			<key>DefaultValue</key>
+			<true/>
+			<key>Title</key>
+			<string>Auto Hardware Acceleration</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Smooth Skin Level</string>
+			<key>Key</key>
+			<string>smooth_skin_level</string>
+			<key>DefaultValue</key>
+			<integer>2</integer>
+			<key>Titles</key>
+			<array>
+				<string>off</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

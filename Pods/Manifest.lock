@@ -1,0 +1,15 @@
+PODS:
+  - InAppSettingsKit (2.8.1)
+  - NodeMediaClient (2.4.2)
+
+DEPENDENCIES:
+  - InAppSettingsKit
+  - NodeMediaClient
+
+SPEC CHECKSUMS:
+  InAppSettingsKit: 94d2fba3ccd700fc4e32c6d09fabcc0af2426744
+  NodeMediaClient: 40fb4a084da8f3b00113c2b5d235e5302b5785a9
+
+PODFILE CHECKSUM: c011df66db6662d447c55ace7683ceb0086ed1f7
+
+COCOAPODS: 1.4.0

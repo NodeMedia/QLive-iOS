@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  QLive
+
+  Created by Mingliang Chen on 2017/12/6.
+  Copyright © 2017年 Mingliang Chen. All rights reserved.
+*/
+CFBundleDisplayName = "快推流";
+NSCameraUsageDescription = "快推流需要获得您的摄像头访问许可，以便开始进行直播。";
+NSMicrophoneUsageDescription = "快推流需要获得您的麦克风访问许可，以便开始进行直播。";
+

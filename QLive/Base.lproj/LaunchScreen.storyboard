@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dqx-yG-w2P"/>
+                        <viewControllerLayoutGuide type="bottom" id="aVU-pL-I6v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QLIVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPx-0q-sIc">
+                                <rect key="frame" x="323" y="936" width="122" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="7dz-fE-lNM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="n7U-zn-KTK"/>
+                                    <constraint firstAttribute="width" constant="122" id="qXc-ZQ-vaL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="yl7-YQ-tg6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="h39-dT-7pe">
+                                <rect key="frame" x="344" y="826" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="BaL-1x-Dys"/>
+                                    <constraint firstAttribute="height" constant="80" id="evl-nf-tgL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bPx-0q-sIc" firstAttribute="top" secondItem="h39-dT-7pe" secondAttribute="bottom" constant="30" id="GLN-Dg-Xuz"/>
+                            <constraint firstItem="h39-dT-7pe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KmB-7d-Kyq"/>
+                            <constraint firstItem="bPx-0q-sIc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="USP-3H-mdN"/>
+                            <constraint firstItem="aVU-pL-I6v" firstAttribute="top" secondItem="bPx-0q-sIc" secondAttribute="bottom" constant="40" id="YpY-FQ-BYI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51.5625" y="374.4140625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo.png" width="140" height="140"/>
+    </resources>
+</document>

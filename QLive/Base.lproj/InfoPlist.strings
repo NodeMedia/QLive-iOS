@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  QLive
+
+  Created by Mingliang Chen on 2017/12/6.
+  Copyright © 2017年 Mingliang Chen. All rights reserved.
+*/
+CFBundleDisplayName = "QLive";
+NSCameraUsageDescription = "QLive needs your camera access permission to start live streaming.";
+NSMicrophoneUsageDescription = "QLive needs your microphone access permission to start live streaming.";

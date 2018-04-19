@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  QLive
+
+  Created by Mingliang Chen on 2017/12/6.
+  Copyright © 2017年 Mingliang Chen. All rights reserved.
+*/
+"Push" = "推流";
+"Play" = "播放";
+"About" = "关于";
+"Start Push" = "开始推流";
+"Connection" = "正在连接";
+"Stop Push" = "停止推流";

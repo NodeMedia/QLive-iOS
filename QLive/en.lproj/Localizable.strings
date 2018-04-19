@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  QLive
+
+  Created by Mingliang Chen on 2017/12/6.
+  Copyright © 2017年 Mingliang Chen. All rights reserved.
+*/
+
+"Push" = "Push";
+"Play" = "Play";
+"About" = "About";
+"Start Push" = "Start Push";
+"Connection" = "Connection";
+"Stop Push" = "Stop Push";

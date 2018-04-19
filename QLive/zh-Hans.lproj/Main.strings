@@ -1,0 +1,27 @@
+
+/* Class = "UITabBarItem"; title = "About"; ObjectID = "1wf-dh-gXq"; */
+"1wf-dh-gXq.title" = "关于";
+
+/* Class = "UINavigationItem"; title = "Conv Settings"; ObjectID = "9fN-xy-8fj"; */
+"9fN-xy-8fj.title" = "串流设置";
+
+/* Class = "UINavigationItem"; title = "About View Controller"; ObjectID = "CZu-Se-J38"; */
+"CZu-Se-J38.title" = "关于";
+
+/* Class = "UITabBarItem"; title = "Conv"; ObjectID = "Fzl-Nb-kLu"; */
+"Fzl-Nb-kLu.title" = "串流";
+
+/* Class = "UINavigationItem"; title = "Play Settings"; ObjectID = "Igv-Ws-3Jn"; */
+"Igv-Ws-3Jn.title" = "播放设置";
+
+/* Class = "UITabBarItem"; title = "Push"; ObjectID = "VNJ-kp-xHF"; */
+"VNJ-kp-xHF.title" = "推流";
+
+/* Class = "UINavigationItem"; title = "Push Settings"; ObjectID = "hKB-qc-KQ3"; */
+"hKB-qc-KQ3.title" = "推流设置";
+
+/* Class = "UITabBarItem"; title = "Play"; ObjectID = "iTO-iN-Htj"; */
+"iTO-iN-Htj.title" = "播放";
+
+/* Class = "UIButton"; normalTitle = "Start Push"; ObjectID = "y7T-Bl-VNs"; */
+"y7T-Bl-VNs.normalTitle" = "开始推流";
