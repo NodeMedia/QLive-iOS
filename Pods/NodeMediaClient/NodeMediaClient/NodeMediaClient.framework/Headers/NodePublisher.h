@@ -50,6 +50,11 @@ typedef enum {
     
 }VideoPreset;
 
+typedef enum {
+    NM_PIXEL_BGRA = 1,
+    NM_PIXEL_RGBA,
+}NMPixelFormat;
+
 typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 
 @protocol NodePublisherDelegate
@@ -82,7 +87,7 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
  */
 @property (nonnull, nonatomic, strong) NSString *connArgs;
 
-///自动重连超时等待时间,单位毫秒,默认2000. 当为0时不自动重连
+///自动重连超时等待时间,单位毫秒,默认为0. 当为0时不自动重连
 @property (nonatomic) NSUInteger autoReconnectWaitTimeout;
 
 ///连接或数据为空超时等待时间,单位毫秒,默认0. 当为0时永久等待
@@ -138,6 +143,9 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 ///设置视频参数
 -(void) setVideoParamPreset:(VideoPreset)preset fps:(int)fps bitrate:(int)bitrate profile:(int)profile frontMirror:(BOOL)frontMirror;
 
+//设置RAWVIDEO参数
+-(void) setRawVideoParamPixelformat:(NMPixelFormat)fmt  width:(int)w height:(int)h fps:(int)f bitrate:(int)b profile:(int)p;
+
 ///摄像头开始预览
 -(int) startPreview;
 
@@ -153,5 +161,9 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 ///切换前后摄像头
 -(int) switchCamera;
 
+//截图
 -(void) capturePicture:(_Nonnull CapturePictureBlock)capturePictureBlock;
+
+//传入BGRA 或 RGBA 数据进行推流 rawvideo
+-(int) pushRawvideo:(uint8_t*)data size:(int)dataSize;
 @end

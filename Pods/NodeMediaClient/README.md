@@ -15,6 +15,8 @@ pod install
 ```
 
 # 简单用法
+完整用例[QLive源码](https://github.com/NodeMedia/QLive-iOS) [(API文档)](https://github.com/NodeMedia/NodeMediaClient-iOS/tree/2.x/docs)
+
 
 ## NodePlayer
 ```
@@ -64,6 +66,10 @@ pod install
     [_np stopPreview];
     [_np stop];
 ```
+
+### 使用第三方相机推流
+https://github.com/NodeMedia/NodeMediaClient-iOS/wiki/使用第三方相机推流
+
 # 特性
 ## NodePlayer
 * 专为RTMP/RTSP等直播协议优化的码流解析器，极短的分析时间，秒开视频流
@@ -133,4 +139,6 @@ fms, wowza, evostream, red5, crtmpserver, nginx-rtmp-module, srs, [Node-Media-Se
 - 麦克风降噪
 - 平滑肌肤美颜
 
-请联系商务服务邮箱 : service@nodemedia.cn
+请联系商务服务  
+邮箱 : service@nodemedia.cn  
+QQ : 281269007

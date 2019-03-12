@@ -28,7 +28,7 @@
     
     _defaults = [NSUserDefaults standardUserDefaults];
     
-    _np = [[NodePublisher alloc] initWithPremium:@"W4hUJuvX60T3yOfFkFpE3OGMVfiDgfBfaZCQ0SJ5V0pi95FnbR+MK5VdjeldTpMC5VdNH2cQnQUzkrR35+PNMA=="];
+    _np = [[NodePublisher alloc] initWithPremium:@"b6aKp7j+wzOOToXrFE/JrfA8WWRwDjqJYFrT6CXScT3t2dQ6lSAhjxjdJ+paZD4wpTJVhfFoQdcx3lFgzHEfSA=="];
     [_np setNodePublisherDelegate:self];
     [_np setOutputUrl:[_defaults objectForKey:@"output_url"]];
     [_np setCameraPreview:self.view cameraId:(int)[_defaults integerForKey:@"camera_postion"] frontMirror:[_defaults boolForKey:@"camera_front_mirror"] ];

@@ -22,7 +22,7 @@
     
     _defaults = [NSUserDefaults standardUserDefaults];
     
-    _np = [[NodePlayer alloc] initWithPremium:@"W4hUJuvX60T3yOfFkFpE3OGMVfiDgfBfaZCQ0SJ5V0pi95FnbR+MK5VdjeldTpMC5VdNH2cQnQUzkrR35+PNMA=="];
+    _np = [[NodePlayer alloc] initWithPremium:@"b6aKp7j+wzOOToXrFE/JrfA8WWRwDjqJYFrT6CXScT3t2dQ6lSAhjxjdJ+paZD4wpTJVhfFoQdcx3lFgzHEfSA=="];
     [_np setPlayerView:self.view];
     
     NSString *inputUrl = [_defaults objectForKey:@"input_url"];
