@@ -4,10 +4,17 @@
 # Cocoapods 安装
 ## 创建 Podfile 文件
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
+# Uncomment the next line to define a global platform for your project
+platform :ios, '8.0'
+
 target 'QLive' do
-pod 'NodeMediaClient'
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for QLive
+  pod 'NodeMediaClient', '~> 2.4.6'
 end
+
 ```
 ## 安装
 ```shell

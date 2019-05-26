@@ -1,6 +1,6 @@
 //
 //  NodeMediaClient.h
-//  v2.4.6
+//  v2.4.7
 //
 //  Created by Mingliang Chen (illuspas@gmail.com) on 16/12/29.
 //  Copyright © 2017 NodeMedia. All rights reserved.

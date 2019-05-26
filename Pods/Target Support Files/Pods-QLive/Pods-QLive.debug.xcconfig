@@ -1,8 +1,8 @@
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/InAppSettingsKit" "${PODS_ROOT}/NodeMediaClient/NodeMediaClient"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/InAppSettingsKit/InAppSettingsKit.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/InAppSettingsKit/InAppSettingsKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreMedia" -framework "InAppSettingsKit" -framework "NodeMediaClient" -framework "VideoToolbox"
+OTHER_LDFLAGS = $(inherited) -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreMedia" -framework "InAppSettingsKit" -framework "MessageUI" -framework "NodeMediaClient" -framework "UIKit" -framework "VideoToolbox"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
