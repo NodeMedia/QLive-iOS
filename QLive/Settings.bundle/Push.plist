@@ -110,6 +110,7 @@
 				<string>16X9_480</string>
 				<string>16X9_540</string>
 				<string>16X9_720</string>
+				<string>16X9_1080</string>
 			</array>
 			<key>Title</key>
 			<string>Video Resolution</string>
@@ -120,6 +121,7 @@
 				<integer>2</integer>
 				<integer>3</integer>
 				<integer>4</integer>
+				<integer>5</integer>
 			</array>
 			<key>DefaultValue</key>
 			<integer>1</integer>
@@ -188,6 +190,7 @@
 				<string>600 kbps</string>
 				<string>800 kbps</string>
 				<string>1000 kbps</string>
+				<string>2000 kbps</string>
 			</array>
 			<key>Values</key>
 			<array>
@@ -196,6 +199,7 @@
 				<integer>600000</integer>
 				<integer>800000</integer>
 				<integer>1000000</integer>
+				<integer>2000000</integer>
 			</array>
 		</dict>
 		<dict>
