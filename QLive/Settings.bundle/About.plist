@@ -18,8 +18,8 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>© QLive 1.0.8
-NodeMediaClient-SDK 2.3.7
+			<string>© QLive 1.1.0
+NodeMediaClient-SDK 2.5.1
 All rights reserved 2019
             </string>
 			<key>Type</key>

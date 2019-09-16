@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -126,9 +125,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Push Settings" id="hKB-qc-KQ3"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="neverShowPrivacySettings" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFC-5R-z0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,25 +163,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yaj-bv-NGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-479" y="-123"/>
-        </scene>
-        <!--Conv Settings-->
-        <scene sceneID="3XV-sr-zbS">
-            <objects>
-                <tableViewController id="TXo-J6-4Z9" customClass="ConvSettingsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="HdW-9q-D3B">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="TXo-J6-4Z9" id="kVo-YZ-bD4"/>
-                            <outlet property="delegate" destination="TXo-J6-4Z9" id="GTG-12-bMg"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Conv Settings" id="9fN-xy-8fj"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qDW-0M-pLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="473" y="727"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="eAA-TN-FMY">
@@ -232,23 +209,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxq-bK-sZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2400" y="750"/>
-        </scene>
-        <!--Conv-->
-        <scene sceneID="Rxd-Ra-iDj">
-            <objects>
-                <navigationController id="8dp-Fi-pqu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conv" image="conv" id="Fzl-Nb-kLu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Wx-26-71z">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="TXo-J6-4Z9" kind="relationship" relationship="rootViewController" id="YdN-8l-kBo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9gZ-U3-n5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-480" y="750"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -307,7 +267,6 @@
     </scenes>
     <resources>
         <image name="about" width="33" height="33"/>
-        <image name="conv" width="33" height="33"/>
         <image name="ic_back" width="36" height="36"/>
         <image name="ic_camera_switch" width="36" height="36"/>
         <image name="ic_flash_off" width="36" height="36"/>
