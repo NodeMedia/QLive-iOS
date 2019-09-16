@@ -19,16 +19,6 @@
 #define CAMERA_BACK             0           //后置摄像头
 #define CAMERA_FRONT            1           //前置摄像头
 
-/**
- * RTMP Publishing Type
- * rtmp_specification_1.0.pdf
- * 7.2.2.6. publish
- */
-#define PUBLISH_TYPE_LIVE 0             //rtmp 发布类型 'live'  默认值 不设置就为该值
-#define PUBLISH_TYPE_RECORD 1           //rtmp 发布类型 'record'
-#define PUBLISH_TYPE_APPEND 2           //rtmp 发布类型 'append'
-
-
 typedef enum {
     VIDEO_PPRESET_16X9_270,
     VIDEO_PPRESET_16X9_360,
@@ -128,9 +118,6 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 
 ///视频关键帧间隔，单位为秒，默认为1
 @property (nonatomic, assign) NSUInteger keyFrameInterval;
-
-///rtmp发布类型
-@property (nonatomic, assign) NSUInteger publishType;
 
 -(instancetype)initWithPremium:(NSString*)key;
 

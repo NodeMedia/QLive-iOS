@@ -12,7 +12,7 @@ target 'QLive' do
   use_frameworks!
 
   # Pods for QLive
-  pod 'NodeMediaClient', '~> 2.4.6'
+  pod 'NodeMediaClient'
 end
 
 ```
@@ -93,15 +93,13 @@ https://github.com/NodeMedia/NodeMediaClient-iOS/wiki/使用第三方相机推�
 * RTMP支持设置swfUrl和pageUrl
 * RTMP支持设置Connect Arguments (rtmpdump风格)
 * RTMP支持Adobe auth模式的鉴权验证 如rtmp://user:pass@server:port/app/name
-* RTMP支持播放前设置receiveAudio,receiveVideo来控制只接收音频或视频流(需服务端实现，fms，red5支持)
 * RTMP支持发送FCSubscribe命令，兼容国外Akamai, Edgecast , Limelight 等CDN
-* RTMP支持RTMP 302重定向(AMS,Wowza模式)
 * RTSP支持的传输协议: TCP/UDP/UDP_MULTICAST/HTTP
 * RTSP支持海康Smart265解码播放
 
 ## NodePublisher
 * H.264/AAC 组合的RTMP协议音视频流发布
-* 全屏视频采集，720p原画质缩放
+* 全屏视频采集，1080p原画质缩放
 * NEON指令集优化H.264软件编码器，性能强劲，兼容性极强
 * H.264支持Baseline, Main, High profile
 * iOS8以上支持视频硬编码
@@ -122,7 +120,6 @@ https://github.com/NodeMedia/NodeMediaClient-iOS/wiki/使用第三方相机推�
 * 支持GPU算法的镜头缩放,兼容性好
 * 全自动网络异常重连
 * 不依赖\不冲突GPUImage
-* 支持定义为'live','record','append'的发布类型
 
 ## NodeStreamer
 用于户外环境下,具有RTSP协议的运动相机/无人机连接手机热点,通过手机4G网络串流到RTMP服务器。  
@@ -141,10 +138,11 @@ fms, wowza, evostream, red5, crtmpserver, nginx-rtmp-module, srs, [Node-Media-Se
 [Node-Media-Server](https://github.com/illuspas/Node-Media-Server) 
 基于Node.JS开发, 跨平台/高性能, 支持RTMP协议推流,RTMP/HTTP-FLV/WebSocket-FLV播放, 内置推流鉴权/播放防盗链/GOP缓存急速秒开.
 
-# 高级版
+# 高级版特性
 - 硬件加速的视频编码、解码器
 - 麦克风降噪
 - 平滑肌肤美颜
+- 视频秒开与累积延迟消除
 
 请联系商务服务  
 邮箱 : service@nodemedia.cn  

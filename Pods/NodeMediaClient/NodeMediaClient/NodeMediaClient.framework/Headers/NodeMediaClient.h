@@ -1,6 +1,6 @@
 //
 //  NodeMediaClient.h
-//  v2.4.7
+//  v2.5.1
 //
 //  Created by Mingliang Chen (illuspas@gmail.com) on 16/12/29.
 //  Copyright © 2017 NodeMedia. All rights reserved.
@@ -19,4 +19,3 @@ FOUNDATION_EXPORT const unsigned char NodeMediaClientVersionString[];
 
 #import <NodeMediaClient/NodePlayer.h>
 #import <NodeMediaClient/NodePublisher.h>
-#import <NodeMediaClient/NodeStreamer.h>

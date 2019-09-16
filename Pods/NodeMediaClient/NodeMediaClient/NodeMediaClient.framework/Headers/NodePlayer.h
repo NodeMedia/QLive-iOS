@@ -103,27 +103,8 @@
 //是否开启视频 随时可以设置
 @property (nonatomic) BOOL videoEnable;
 
-///是否接收音频数据 只能在开始播放前设置,注意:不是所有流媒体服务器支持该指令
-@property (nonatomic) BOOL receiveAudio;
-
-///是否接收视频数据 只能在开始播放前设置,注意:不是所有流媒体服务器支持该指令
-@property (nonatomic) BOOL receiveVideo;
-
 ///是否以subscribe模式播放视频
 @property (nonatomic) BOOL subscribe;
-
-/**
- * @brief 启用本地RTMP服务模式进行播放,可以实现去中心化的单/双向点对点音视频通讯.
- * 例如:播放rtmp://0.0.0.0/stream_name 然后等待远端推送stream_name流到当前IP地址
- * 默认监听1935端口,也可改为其它,推送端响应改为其它
- * 当进行双向音频时,声音为扬声器外放.需要推送端都采用NodePublisher的speex编码,自动开启回音消除
- * 注意:
- *  1.该功能无法穿透NAT,仅建议用于局域网内通讯.
- *  2.呼叫/接听/挂断协议需另外的消息通讯
- *  3.一次只能建立一个通讯
- * 若需实现公网上的P2P通讯,请关注本项目后期实现的RTMFP协议支持
- */
-@property (nonatomic) BOOL localRTMP;
 
 #pragma mark 属性
 

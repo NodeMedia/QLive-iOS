@@ -1,6 +1,6 @@
 PODS:
   - InAppSettingsKit (2.12)
-  - NodeMediaClient (2.4.7)
+  - NodeMediaClient (2.5.1)
 
 DEPENDENCIES:
   - InAppSettingsKit
@@ -13,7 +13,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   InAppSettingsKit: 363ed5ea061ebcb76d69ca1eed08c8a4fe48baf2
-  NodeMediaClient: 09b745c0fff8a771ac625c6f5fefe03223893d16
+  NodeMediaClient: eafd5dfde5faf8bd15d582772b162fffcbd61223
 
 PODFILE CHECKSUM: e8843aa143bc696d520dae729b007ebd07568584
 
