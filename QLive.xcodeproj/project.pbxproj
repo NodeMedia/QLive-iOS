@@ -447,7 +447,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QLive",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.qklive;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.kkklive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -471,7 +471,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QLive",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.qklive;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.kkklive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

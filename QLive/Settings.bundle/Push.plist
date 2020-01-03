@@ -191,6 +191,7 @@
 				<string>800 kbps</string>
 				<string>1000 kbps</string>
 				<string>2000 kbps</string>
+				<string>3000 kbps</string>
 			</array>
 			<key>Values</key>
 			<array>
@@ -200,6 +201,7 @@
 				<integer>800000</integer>
 				<integer>1000000</integer>
 				<integer>2000000</integer>
+				<integer>3000000</integer>
 			</array>
 		</dict>
 		<dict>
@@ -210,7 +212,7 @@
 			<key>Key</key>
 			<string>video_fps</string>
 			<key>DefaultValue</key>
-			<integer>20</integer>
+			<integer>24</integer>
 			<key>Titles</key>
 			<array>
 				<string>15 fps</string>

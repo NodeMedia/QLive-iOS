@@ -20,6 +20,7 @@
 #import "IASKSettingsStoreFile.h"
 #import "IASKSettingsStoreUserDefaults.h"
 #import "IASKSpecifier.h"
+#import "IASKColor.h"
 #import "IASKPSSliderSpecifierViewCell.h"
 #import "IASKPSTextFieldSpecifierViewCell.h"
 #import "IASKSlider.h"

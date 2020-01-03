@@ -68,7 +68,7 @@
 @property (nonatomic) int maxBufferTime;
 
 
-///自动重连超时等待时间,单位毫秒,默认2000. 当为0时不自动重连
+///自动重连超时等待时间,单位毫秒,默认2000. 当小于0时不自动重连
 @property (nonatomic) int autoReconnectWaitTimeout;
 
 

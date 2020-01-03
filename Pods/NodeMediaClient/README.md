@@ -121,11 +121,6 @@ https://github.com/NodeMedia/NodeMediaClient-iOS/wiki/使用第三方相机推�
 * 全自动网络异常重连
 * 不依赖\不冲突GPUImage
 
-## NodeStreamer
-用于户外环境下,具有RTSP协议的运动相机/无人机连接手机热点,通过手机4G网络串流到RTMP服务器。  
-手机端不进行编解码,只有网络IO,不占用CPU.注:当按Home或锁屏时,系统会禁止后台网络传输。  
-RTSP输入支持的传输协议: TCP/UDP/UDP_MULTICAST/HTTP
-
 ## MPEGTS over UDP
 当推流url为udp协议地址时, 如 udp://192.168.0.10:12345 则按照mpegts格式封装，udp传输。
 接收端可以是任何支持该协议的播放器，如vlc。
@@ -142,7 +137,6 @@ fms, wowza, evostream, red5, crtmpserver, nginx-rtmp-module, srs, [Node-Media-Se
 - 硬件加速的视频编码、解码器
 - 麦克风降噪
 - 平滑肌肤美颜
-- 视频秒开与累积延迟消除
 
 请联系商务服务  
 邮箱 : service@nodemedia.cn  

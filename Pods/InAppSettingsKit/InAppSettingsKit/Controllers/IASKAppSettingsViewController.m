@@ -611,6 +611,7 @@ CGRect IASKCGRectSwap(CGRect rect);
 		IASKTextField *textField = ((IASKPSTextFieldSpecifierViewCell*)cell).textField;
 		textField.text = textValue;
 		textField.key = specifier.key;
+		textField.regex = specifier.regex;
 		textField.delegate = self;
 		textField.secureTextEntry = [specifier isSecure];
 		textField.keyboardType = specifier.keyboardType;
@@ -943,11 +944,14 @@ CGRect IASKCGRectSwap(CGRect rect);
 
 - (void)_textChanged:(id)sender {
     IASKTextField *text = sender;
-    [_settingsStore setObject:[text text] forKey:[text key]];
-    NSDictionary *userInfo = text.text ? @{text.key : (NSString *)text.text} : nil;
-    [[NSNotificationCenter defaultCenter] postNotificationName:kIASKAppSettingChanged
-                                                        object:self
-                                                      userInfo:userInfo];
+    // If there's a regex to do input validation then don't set the property now. Instead it's done when editting ends
+    if (text.regex == nil) {
+        [_settingsStore setObject:text.text forKey:text.key];
+        NSDictionary *userInfo = text.text ? @{text.key : (NSString *)text.text} : nil;
+        [NSNotificationCenter.defaultCenter postNotificationName:kIASKAppSettingChanged
+                                                          object:self
+                                                        userInfo:userInfo];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -958,6 +962,47 @@ CGRect IASKCGRectSwap(CGRect rect);
 
 - (void)singleTapToEndEdit:(UIGestureRecognizer *)sender {
     [self.tableView endEditing:NO];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    BOOL allow = true;
+	IASKTextField *text      = (IASKTextField *) textField;
+	IASKSpecifier *specifier = [self.settingsReader specifierForKey:text.key];
+	if (text.regex != nil) {
+        NSString *textValue = text.text ?: @"";
+        allow = [text.regex numberOfMatchesInString:textValue options:0 range:(NSRange){0, textValue.length}] > 0;
+    }
+    // if the input validates has passed, update the settings store and send out a notification. If it's failed set the
+    // text field back to the previous value.
+    if (allow) {
+        [_settingsStore setObject:text.text forKey:[text key]];
+        NSDictionary *userInfo = text.text ? @{text.key : (NSString *)text.text} : nil;
+        [NSNotificationCenter.defaultCenter postNotificationName:kIASKAppSettingChanged
+                                                          object:self
+                                                        userInfo:userInfo];
+		if ([self.delegate respondsToSelector:@selector(settingsViewController:validationSuccessForSpecifier:textField:)]) {
+			[self.delegate settingsViewController:self
+					validationSuccessForSpecifier:specifier
+										textField:text];
+		}
+    } else {
+        NSString *textValue = [self.settingsStore objectForKey:text.key] ?: specifier.defaultStringValue;
+        if (textValue && ![textValue isMemberOfClass:NSString.class]) {
+            textValue = [NSString stringWithFormat:@"%@", textValue];
+        }
+		// If the delegate can handle validation failures check what response it requires
+		BOOL defaultBehaviour = true;
+		if ([self.delegate respondsToSelector:@selector(settingsViewController:validationFailureForSpecifier:textField:previousValue:)]) {
+			defaultBehaviour = [self.delegate settingsViewController:self
+									   validationFailureForSpecifier:specifier
+														   textField:text
+													   previousValue:textValue];
+		}
+		if (defaultBehaviour) {
+			text.text = textValue;
+			[text shake];
+		}
+    }
 }
 
 #pragma mark - UITextViewDelegate
