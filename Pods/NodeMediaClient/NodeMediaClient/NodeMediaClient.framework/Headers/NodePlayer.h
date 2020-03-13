@@ -15,7 +15,7 @@
 
 @protocol NodePlayerDelegate
 
--(void) onEventCallback:(nonnull id)sender event:(int)event msg:(nonnull NSString*)msg;
+-(void) onEventCallback:(id _Nonnull)sender event:(int)event msg:(NSString* _Nonnull)msg;
 
 @end
 
@@ -36,9 +36,9 @@
 
 /**
  * @brief rtmpdump 风格的connect参数
- * Append arbitrary AMF data to the Connect message. The type must be B for Boolean, N for number, S for string, O for object, or Z for null. 
- * For Booleans the data must be either 0 or 1 for FALSE or TRUE, respectively. Likewise for Objects the data must be 0 or 1 to end or begin an object, respectively. 
- * Data items in subobjects may be named, by prefixing the type with 'N' and specifying the name before the value, e.g. NB:myFlag:1. 
+ * Append arbitrary AMF data to the Connect message. The type must be B for Boolean, N for number, S for string, O for object, or Z for null.
+ * For Booleans the data must be either 0 or 1 for FALSE or TRUE, respectively. Likewise for Objects the data must be 0 or 1 to end or begin an object, respectively.
+ * Data items in subobjects may be named, by prefixing the type with 'N' and specifying the name before the value, e.g. NB:myFlag:1.
  * This option may be used multiple times to construct arbitrary AMF sequences. E.g.
  */
 @property (nonnull, nonatomic, strong) NSString *connArgs;
@@ -68,12 +68,12 @@
 @property (nonatomic) int maxBufferTime;
 
 
-///自动重连超时等待时间,单位毫秒,默认2000. 当小于0时不自动重连
-@property (nonatomic) int autoReconnectWaitTimeout;
+///自动重连超时等待时间,单位毫秒, 默认2000. 当为0时不自动重连
+@property (nonatomic) unsigned int autoReconnectWaitTimeout;
 
 
-///连接或数据为空超时等待时间,单位毫秒,默认10000. 当为0时,永久等待
-@property (nonatomic) int connectWaitTimeout;
+///连接或数据为空超时等待时间,单位毫秒, 默认10000. 当为0时永久等待
+@property (nonatomic) unsigned int connectWaitTimeout;
 
 /**
  * @brief 视频缩放模式
@@ -92,7 +92,7 @@
  * @brief 是否开始硬件解码加速,开始播放前设置有效,默认开启.
  *
  * 当视频编码为H.264\MPEG4\H.263,可以使用硬件解码加速来降低cpu占用,降低能耗.
- * 
+ *
  * 当初始化失败,或者系统版本不支持时,自动转为软解码.
  */
 @property (nonatomic) BOOL hwEnable;
@@ -106,9 +106,12 @@
 ///是否以subscribe模式播放视频
 @property (nonatomic) BOOL subscribe;
 
+///设置视频解密秘钥, 16字节
+@property (nonnull, nonatomic, strong) NSString *cryptoKey;
+
 #pragma mark 属性
 
--(instancetype)initWithPremium:(NSString*)key;
+-(instancetype _Nonnull)initWithLicense:(NSString* _Nonnull)key;
 
 ///获取当前视频总时长,单位毫秒.直播流为0
 -(long) getDuration;
@@ -133,10 +136,8 @@
 ///停止播放
 -(int) stop;
 
-
 ///停止播放但不清除画面
 -(int) stop:(BOOL)clear;
-
 
 ///暂停播放,当前为直播流时无效
 -(int) pause;

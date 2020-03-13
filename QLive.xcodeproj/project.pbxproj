@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1516A5CF4E5E882C4DFA2D19 /* Pods_QLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4085CA300AAC96FC676E81D8 /* Pods_QLive.framework */; };
+		851698C5DE7EBF0FE6D576B8 /* libPods-QLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E8D620B5630DA822DA5746 /* libPods-QLive.a */; };
 		9D242C341FD78786009F261B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D242C361FD78786009F261B /* InfoPlist.strings */; };
 		9D242C3B1FD790BA009F261B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D242C3D1FD790BA009F261B /* Localizable.strings */; };
 		9D242C421FD79727009F261B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D242C411FD79727009F261B /* logo.png */; };
@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		4085CA300AAC96FC676E81D8 /* Pods_QLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6BF3EE1420A82E411F60CD /* Pods-QLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-QLive/Pods-QLive.release.xcconfig"; sourceTree = "<group>"; };
+		74E8D620B5630DA822DA5746 /* libPods-QLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D242C2A1FD77F02009F261B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		9D242C351FD78786009F261B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9D242C371FD787B3009F261B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		9DFF1FF71FC6E569008AC4D9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9DFF1FFF1FC6F7F5008AC4D9 /* PlaySettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaySettingsViewController.h; sourceTree = "<group>"; };
 		9DFF20001FC6F7F5008AC4D9 /* PlaySettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaySettingsViewController.m; sourceTree = "<group>"; };
+		B335497DBEEC35ED7F825260 /* Pods_QLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F459096420D652C57239C6CD /* Pods-QLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QLive/Pods-QLive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,13 +72,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA888231FC7206F00EAB3D4 /* libz.tbd in Frameworks */,
-				1516A5CF4E5E882C4DFA2D19 /* Pods_QLive.framework in Frameworks */,
+				851698C5DE7EBF0FE6D576B8 /* libPods-QLive.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D7C26AC241B822B0087DDC5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				4085CA300AAC96FC676E81D8 /* Pods_QLive.framework */,
+				B335497DBEEC35ED7F825260 /* Pods_QLive.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		9DB300B51FC6B875007EA3C1 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +95,7 @@
 				9DB300BF1FC6B875007EA3C1 /* Products */,
 				9DFF1FEF1FC6D600008AC4D9 /* Frameworks */,
 				A58CE7A24EDBDDE36D8C5CAE /* Pods */,
+				9D7C26AC241B822B0087DDC5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA888221FC7206F00EAB3D4 /* libz.tbd */,
-				4085CA300AAC96FC676E81D8 /* Pods_QLive.framework */,
+				74E8D620B5630DA822DA5746 /* libPods-QLive.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,7 +168,7 @@
 				9DB300BA1FC6B875007EA3C1 /* Sources */,
 				9DB300BB1FC6B875007EA3C1 /* Frameworks */,
 				9DB300BC1FC6B875007EA3C1 /* Resources */,
-				4B973433AD44CCAE575B2CD6 /* [CP] Embed Pods Frameworks */,
+				7D9A3B384CC94ABD18FFB91B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,24 +254,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4B973433AD44CCAE575B2CD6 /* [CP] Embed Pods Frameworks */ = {
+		7D9A3B384CC94ABD18FFB91B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QLive/Pods-QLive-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
-				"${PODS_ROOT}/NodeMediaClient/NodeMediaClient/NodeMediaClient.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-QLive/Pods-QLive-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/InAppSettingsKit/InAppSettingsKit.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InAppSettingsKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NodeMediaClient.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/InAppSettingsKit.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QLive/Pods-QLive-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QLive/Pods-QLive-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -447,7 +457,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QLive",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.kkklive;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.kklive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -471,7 +481,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QLive",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.kkklive;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.kklive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

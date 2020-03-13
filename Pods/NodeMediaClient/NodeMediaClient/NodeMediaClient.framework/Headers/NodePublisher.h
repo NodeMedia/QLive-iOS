@@ -10,7 +10,6 @@
 
 #define AUDIO_PROFILE_LCAAC     0           //LC-AAC
 #define AUDIO_PROFILE_HEAAC     1           //HE-AAC
-#define AUDIO_PROFILE_SPEEX     2           //SPEEX
 
 #define VIDEO_PROFILE_BASELINE  0           //H.264 Baseline profile
 #define VIDEO_PROFILE_MAIN      1           //H.264 Main profile
@@ -43,16 +42,11 @@ typedef enum {
     
 }VideoPreset;
 
-typedef enum {
-    NM_PIXEL_BGRA = 1,
-    NM_PIXEL_RGBA,
-}NMPixelFormat;
-
 typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 
 @protocol NodePublisherDelegate
 
--(void) onEventCallback:(nonnull id)sender event:(int)event msg:(nonnull NSString*)msg;
+-(void) onEventCallback:(id _Nonnull)sender event:(int)event msg:(NSString* _Nonnull)msg;
 
 @end
 
@@ -119,10 +113,13 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 ///视频关键帧间隔，单位为秒，默认为1
 @property (nonatomic, assign) NSUInteger keyFrameInterval;
 
--(instancetype)initWithPremium:(NSString*)key;
+///设置视频加密秘钥, 16字节
+@property (nonnull, nonatomic, strong) NSString *cryptoKey;
+
+-(instancetype _Nonnull)initWithLicense:(NSString* _Nonnull)key;
 
 ///设置摄像头预览视图
--(void) setCameraPreview:(nonnull UIView*)preView cameraId:(int)cameraId frontMirror:(BOOL)frontMirror;
+-(void) setCameraPreview:(UIView* _Nonnull)preView cameraId:(int)cameraId frontMirror:(BOOL)frontMirror;
 
 ///设置音频参数
 -(void) setAudioParamBitrate:(int)bitrate profile:(int)profile;
@@ -133,14 +130,17 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 ///设置视频参数
 -(void) setVideoParamPreset:(VideoPreset)preset fps:(int)fps bitrate:(int)bitrate profile:(int)profile frontMirror:(BOOL)frontMirror;
 
-//设置RAWVIDEO参数
--(void) setRawVideoParamPixelformat:(NMPixelFormat)fmt  width:(int)w height:(int)h fps:(int)f bitrate:(int)b profile:(int)p;
-
 ///摄像头开始预览
 -(int) startPreview;
 
 ///摄像头停止预览
 -(int) stopPreview;
+
+///切换前后摄像头
+-(int) switchCamera;
+
+//截图
+-(void) capturePicture:(CapturePictureBlock _Nonnull)capturePictureBlock;
 
 ///开始播放
 -(int) start;
@@ -148,12 +148,4 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 ///停止播放
 -(int) stop;
 
-///切换前后摄像头
--(int) switchCamera;
-
-//截图
--(void) capturePicture:(_Nonnull CapturePictureBlock)capturePictureBlock;
-
-//传入BGRA 或 RGBA 数据进行推流 rawvideo
--(int) pushRawvideo:(uint8_t*)data size:(int)dataSize;
 @end

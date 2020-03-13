@@ -36,6 +36,7 @@
 
 - (void)settingsViewController:(IASKAppSettingsViewController*)sender buttonTappedForSpecifier:(IASKSpecifier*)specifier {
     LivePlayViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"livePlayVC"];
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:controller animated:YES completion:nil];
 }
 

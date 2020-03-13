@@ -34,6 +34,7 @@
 
 - (void)settingsViewController:(IASKAppSettingsViewController*)sender buttonTappedForSpecifier:(IASKSpecifier*)specifier {
     LivePushViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"livePushVC"];
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:controller animated:YES completion:nil];
 }
 

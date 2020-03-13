@@ -22,7 +22,7 @@
     
     _defaults = [NSUserDefaults standardUserDefaults];
     
-    _np = [[NodePlayer alloc] initWithPremium:@"b6aKp7j+wzOOToXrFE/JrfA8WWRwDjqJYFrT6CXScT3t2dQ6lSAhjxjdJ+paZD4wpTJVhfFoQdcx3lFgzHEfSA=="];
+    _np = [[NodePlayer alloc] initWithLicense:@"ZjJhNTIzODAtNGU0ZDUzMjEtY24ubm9kZW1lZGlh-Tz/mF2xTaPRuHwcs5iWTsF19k38qZ4Dx+OFb0V+KtFUnXexWLD5d4bs2YczQaZsrrIhKakTyrIVp8zV4bHtf37wenADt+OekVR3BP7+eKzCovGk47mPYqxXH0ZPBOxNub6AZC/J9HupKgXzEzwDppIw+vM5Pb1mSH9qJdX6Ui2jF634xYbKWP5b7eWpX2qw1h5OZZwLIh9OO0rKPxS3VPHKoZ6HaXyWgYgzBj9nlN7gOHEbJM5QNqGQMq5l5sWbpiv7BhZRoUc+N2QiOCQj5TjboKiV4IkVuwIwBU0D4Z4GWrbvngl64Y09nZn3ZMxLB2GK+0nxSjsgkz4w4GQSzpQ=="];
     [_np setPlayerView:self.view];
     
     NSString *inputUrl = [_defaults objectForKey:@"input_url"];

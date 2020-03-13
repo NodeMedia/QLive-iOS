@@ -82,9 +82,9 @@ https://github.com/NodeMedia/NodeMediaClient-iOS/wiki/使用第三方相机推�
 * 专为RTMP/RTSP等直播协议优化的码流解析器，极短的分析时间，秒开视频流
 * NEON指令集优化的软件解码器，性能好，兼容性强
 * 视频编码:H.265/H.264/H.263/MPEG4支持硬解码
-* 支持的网络协议 RTMP/RTMPT/RTMPE/RTSP/HLS/HTTP(S)-FLV
-* 支持的视频解码器:H.264, H.265,FLV, VP6, MPEG4
-* 支持的音频解码器:AAC, MP3, SPEEX, NELLYMOSER, ADPCM_SWF, G.711
+* 支持的网络协议 RTMP/RTMPT/RTMPE/RTSP/HLS/HTTP(S)-FLV/KMP
+* 支持的视频解码器:H.264, H.265,
+* 支持的音频解码器:AAC, SPEEX, NELLYMOSER, G.711
 * OpenGL ES视频渲染
 * 全自动网络异常重连
 * 支持播放中途来电保持网络流，暂停播放，挂机后继续播放
@@ -96,6 +96,7 @@ https://github.com/NodeMedia/NodeMediaClient-iOS/wiki/使用第三方相机推�
 * RTMP支持发送FCSubscribe命令，兼容国外Akamai, Edgecast , Limelight 等CDN
 * RTSP支持的传输协议: TCP/UDP/UDP_MULTICAST/HTTP
 * RTSP支持海康Smart265解码播放
+* 支持RTMP/HTTP-FLV视频解密播放
 
 ## NodePublisher
 * H.264/AAC 组合的RTMP协议音视频流发布
@@ -120,11 +121,7 @@ https://github.com/NodeMedia/NodeMediaClient-iOS/wiki/使用第三方相机推�
 * 支持GPU算法的镜头缩放,兼容性好
 * 全自动网络异常重连
 * 不依赖\不冲突GPUImage
-
-## MPEGTS over UDP
-当推流url为udp协议地址时, 如 udp://192.168.0.10:12345 则按照mpegts格式封装，udp传输。
-接收端可以是任何支持该协议的播放器，如vlc。
-如果推流ip地址是内网另外一台手机，则另一台手机只需用NodePlayer播放udp://127.0.0.1:12345即可，根据udp的特性，可随时打开关闭，再打开不中断，无需服务端
+* 支持RTMP视频加密推流
 
 # 支持的流媒体服务端
 fms, wowza, evostream, red5, crtmpserver, nginx-rtmp-module, srs, [Node-Media-Server](https://github.com/illuspas/Node-Media-Server) 及其他标准RTMP协议服务端
@@ -133,10 +130,17 @@ fms, wowza, evostream, red5, crtmpserver, nginx-rtmp-module, srs, [Node-Media-Se
 [Node-Media-Server](https://github.com/illuspas/Node-Media-Server) 
 基于Node.JS开发, 跨平台/高性能, 支持RTMP协议推流,RTMP/HTTP-FLV/WebSocket-FLV播放, 内置推流鉴权/播放防盗链/GOP缓存急速秒开.
 
+# 直播视频加密解密
+v2.6.2增加RTMP实时视频加密解密功能, 只对音视频内容进行加密, 不改变传输协议.  
+不限流媒体服务端, 对现有架构无任何改动, 非常适合用作付费教育直播等场景.  
+即使被抓包分析到流地址, 仍然无法被ffmpeg等任何工具解密.  
+用户自定义密码, 可随时更换.
+
 # 高级版特性
 - 硬件加速的视频编码、解码器
 - 麦克风降噪
 - 平滑肌肤美颜
+- RTMP音视频内容加密
 
 请联系商务服务  
 邮箱 : service@nodemedia.cn  

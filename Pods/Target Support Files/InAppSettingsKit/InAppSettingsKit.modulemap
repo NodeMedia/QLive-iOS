@@ -1,4 +1,4 @@
-framework module InAppSettingsKit {
+module InAppSettingsKit {
   umbrella header "InAppSettingsKit-umbrella.h"
 
   export *
