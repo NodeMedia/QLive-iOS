@@ -46,11 +46,13 @@
     BOOL m = [_defaults boolForKey:@"video_front_mirror"];
     BOOL d = [_defaults boolForKey:@"push_denoise"];
     BOOL h = [_defaults boolForKey:@"push_hw"];
+    NSString *cryptoKey = [_defaults objectForKey:@"push_cryptokey"];
     [_np setVideoParamPreset:r fps:(int)f bitrate:(int)b profile:p frontMirror:m];
     [_np setKeyFrameInterval:k];
     [_np setBeautyLevel:s];
     [_np setDenoiseEnable:d];
     [_np setHwEnable:h];
+    [_np setCryptoKey:cryptoKey];
     [_np startPreview];
     _isStart = NO;
     _isFlashEnable = NO;

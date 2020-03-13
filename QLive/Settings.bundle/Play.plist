@@ -98,6 +98,20 @@
             <key>Title</key>
             <string>Auto Hardware Acceleration</string>
         </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSTextFieldSpecifier</string>
+            <key>Key</key>
+            <string>play_cryptokey</string>
+            <key>DefaultValue</key>
+            <string></string>
+            <key>Title</key>
+            <string>CryptoKey</string>
+            <key>KeyboardType</key>
+            <string>Alphabet</string>
+            <key>IASKTextAlignment</key>
+            <string>IASKUITextAlignmentRight</string>
+        </dict>
 	</array>
 </dict>
 </plist>

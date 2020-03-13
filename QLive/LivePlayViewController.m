@@ -30,11 +30,13 @@
     int m = (int) [_defaults integerForKey:@"play_maxbuffertime"];
     int s = (int) [_defaults integerForKey:@"video_scale_mode"];
     BOOL h = [_defaults boolForKey:@"play_hw"];
+    NSString *cryptoKey = [_defaults objectForKey:@"play_cryptokey"];
     [_np setInputUrl:inputUrl];
     [_np setBufferTime:b];
     [_np setMaxBufferTime:m];
     [_np setContentMode:s];
     [_np setHwEnable:h];
+    [_np setCryptoKey:cryptoKey];
     [_np start];
 }
 
