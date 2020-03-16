@@ -28,7 +28,7 @@
     
     _defaults = [NSUserDefaults standardUserDefaults];
     
-    _np = [[NodePublisher alloc] initWithLicense:@"ZjJhNTIzODAtNGU0ZDUzMjEtY24ubm9kZW1lZGlh-Tz/mF2xTaPRuHwcs5iWTsF19k38qZ4Dx+OFb0V+KtFUnXexWLD5d4bs2YczQaZsrrIhKakTyrIVp8zV4bHtf37wenADt+OekVR3BP7+eKzCovGk47mPYqxXH0ZPBOxNub6AZC/J9HupKgXzEzwDppIw+vM5Pb1mSH9qJdX6Ui2jF634xYbKWP5b7eWpX2qw1h5OZZwLIh9OO0rKPxS3VPHKoZ6HaXyWgYgzBj9nlN7gOHEbJM5QNqGQMq5l5sWbpiv7BhZRoUc+N2QiOCQj5TjboKiV4IkVuwIwBU0D4Z4GWrbvngl64Y09nZn3ZMxLB2GK+0nxSjsgkz4w4GQSzpQ=="];
+    _np = [[NodePublisher alloc] initWithLicense:@"M2FmZTEzMGUwMC00ZTRkNTMyMS1jbi5ub2RlbWVkaWEua2tsaXZl-K454JyltvzUKnAUuAQsLR95VaC22U9WmJ2kM3HLRVeyz6/0GFl0Wqasvoma6LgP1OVWnFpCduHgIU7tOOCTy7i2RfkuGdb/kVGFtskgtpuRxVTqUuoGMlTCljoB8bh7Md6X7L/w4LqiITYrAqrQOxqJJdZg6qZDcyGcFuw7C2E/dlEtkQ9uMRiFCe0GI/7UeLZ2r0ktRaETNnQ/qFDXcVpQs/NpEuZ41u7nCPJsaa5TnH27p/29oTRfEY6KHgPPeANrVcaun1u8HThm1IH09dJ/MSK3Sy58OuzGT5IoLgmqEPDjRgQWrurJcadleYxIJuVWLTVkXluKyn0bGfBECEw=="];
     [_np setNodePublisherDelegate:self];
     [_np setOutputUrl:[_defaults objectForKey:@"output_url"]];
     [_np setCameraPreview:self.view cameraId:(int)[_defaults integerForKey:@"camera_postion"] frontMirror:[_defaults boolForKey:@"camera_front_mirror"] ];
