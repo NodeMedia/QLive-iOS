@@ -97,10 +97,10 @@
  */
 @property (nonatomic) BOOL hwEnable;
 
-//是否开启音频 随时可以设置
+///是否开启音频 随时可以设置
 @property (nonatomic) BOOL audioEnable;
 
-//是否开启视频 随时可以设置
+///是否开启视频 随时可以设置
 @property (nonatomic) BOOL videoEnable;
 
 ///是否以subscribe模式播放视频
@@ -109,9 +109,16 @@
 ///设置视频解密秘钥, 16字节
 @property (nonnull, nonatomic, strong) NSString *cryptoKey;
 
+///设置音量 0.0 ~ 1.0
+@property (nonatomic) float volume;
+
+///设置日志等级，0-错误，1-信息，2-调试
+@property (nonatomic) int logLevel;
+
 #pragma mark 属性
 
 -(instancetype _Nonnull)initWithLicense:(NSString* _Nonnull)key;
+
 
 ///获取当前视频总时长,单位毫秒.直播流为0
 -(long) getDuration;

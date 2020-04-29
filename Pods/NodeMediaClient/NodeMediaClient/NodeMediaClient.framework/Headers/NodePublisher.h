@@ -116,6 +116,9 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 ///设置视频加密秘钥, 16字节
 @property (nonnull, nonatomic, strong) NSString *cryptoKey;
 
+///设置日志等级，0-错误，1-信息，2-调试
+@property (nonatomic) int logLevel;
+
 -(instancetype _Nonnull)initWithLicense:(NSString* _Nonnull)key;
 
 ///设置摄像头预览视图
