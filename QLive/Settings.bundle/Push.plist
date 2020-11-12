@@ -54,7 +54,7 @@
 				<integer>1</integer>
 			</array>
 			<key>DefaultValue</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -124,7 +124,7 @@
 				<integer>5</integer>
 			</array>
 			<key>DefaultValue</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -172,7 +172,7 @@
 				<integer>5</integer>
 			</array>
 			<key>DefaultValue</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -182,7 +182,7 @@
 			<key>Key</key>
 			<string>video_bitrate</string>
 			<key>DefaultValue</key>
-			<integer>500000</integer>
+			<integer>1000000</integer>
 			<key>Titles</key>
 			<array>
 				<string>300 kbps</string>
@@ -212,7 +212,7 @@
 			<key>Key</key>
 			<string>video_fps</string>
 			<key>DefaultValue</key>
-			<integer>24</integer>
+			<integer>30</integer>
 			<key>Titles</key>
 			<array>
 				<string>15 fps</string>
@@ -264,7 +264,7 @@
 			<key>Key</key>
 			<string>audio_bitrate</string>
 			<key>DefaultValue</key>
-			<integer>32000</integer>
+			<integer>64000</integer>
 			<key>Titles</key>
 			<array>
 				<string>32 kbps</string>
@@ -288,7 +288,7 @@
 			<key>Key</key>
 			<string>audio_samplerate</string>
 			<key>DefaultValue</key>
-			<integer>44100</integer>
+			<integer>48000</integer>
 			<key>Titles</key>
 			<array>
 				<string>8kHz</string>
