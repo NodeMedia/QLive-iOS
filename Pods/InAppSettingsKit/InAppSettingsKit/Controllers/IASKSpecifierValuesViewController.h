@@ -1,8 +1,8 @@
 //
 //  IASKSpecifierValuesViewController.h
-//  http://www.inappsettingskit.com
+//  InAppSettingsKit
 //
-//  Copyright (c) 2009:
+//  Copyright (c) 2009-2020:
 //  Luc Vandal, Edovia Inc., http://www.edovia.com
 //  Ortwin Gentz, FutureTap GmbH, http://www.futuretap.com
 //  All rights reserved.
@@ -15,14 +15,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <InAppSettingsKit/IASKSettingsStore.h>
-#import <InAppSettingsKit/IASKViewController.h>
+
+#import "IASKViewController.h"
 
 @class IASKSpecifier;
-@class IASKSettingsReader;
 
 @interface IASKSpecifierValuesViewController : UITableViewController <IASKViewController>
 
-@property (nonatomic, strong) IASKSpecifier *currentSpecifier;
+- (nonnull id)initWithSpecifier:(nonnull IASKSpecifier*)specifier;
 
 @end

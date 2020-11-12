@@ -1,8 +1,8 @@
 //
 //  IASKSpecifierValuesViewController.m
-//  http://www.inappsettingskit.com
+//  InAppSettingsKit
 //
-//  Copyright (c) 2009:
+//  Copyright (c) 2009-2020:
 //  Luc Vandal, Edovia Inc., http://www.edovia.com
 //  Ortwin Gentz, FutureTap GmbH, http://www.futuretap.com
 //  All rights reserved.
@@ -22,8 +22,8 @@
 #define kCellValue      @"kCellValue"
 
 @interface IASKSpecifierValuesViewController()
-
-@property (nonatomic, strong, readonly) IASKMultipleValueSelection *selection;
+@property (nonnull, nonatomic, strong) IASKSpecifier *currentSpecifier;
+@property (nonatomic, strong) IASKMultipleValueSelection *selection;
 @property (nonatomic) BOOL didFirstLayout;
 @end
 
@@ -31,28 +31,34 @@
 
 @synthesize settingsReader = _settingsReader;
 @synthesize settingsStore = _settingsStore;
+@synthesize childPaneHandler = _childPaneHandler;
+@synthesize listParentViewController;
+
+- (id)initWithSpecifier:(IASKSpecifier*)specifier {
+	if ((self = [super initWithStyle:UITableViewStyleGrouped])) {
+		self.currentSpecifier = specifier;
+	};
+	return self;
+}
 
 - (void)setSettingsStore:(id <IASKSettingsStore>)settingsStore {
-	_selection = [IASKMultipleValueSelection new];
-    _settingsStore = settingsStore;
-    _selection.settingsStore = settingsStore;
-	_selection.specifier = _currentSpecifier;
+	self.selection = [[IASKMultipleValueSelection alloc] initWithSettingsStore:settingsStore tableView:self.tableView specifier:self.currentSpecifier section:0];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-    if (_currentSpecifier) {
-		self.title = _currentSpecifier.title;
+    if (self.currentSpecifier) {
+		self.title = self.currentSpecifier.title;
 		IASK_IF_IOS11_OR_GREATER(self.navigationItem.largeTitleDisplayMode = self.title.length ? UINavigationItemLargeTitleDisplayModeAutomatic : UINavigationItemLargeTitleDisplayModeNever;);
     }
     
     if (self.tableView) {
-		_selection.tableView = self.tableView;
+		self.selection.tableView = self.tableView;
 		[self.tableView reloadData];
 
 		// Make sure the currently checked item is visible
-		[self.tableView scrollToRowAtIndexPath:_selection.checkedItem
+		[self.tableView scrollToRowAtIndexPath:self.selection.checkedIndexPath
 							  atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
 	}
 	self.didFirstLayout = NO;
@@ -60,7 +66,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
-    _selection.tableView = nil;
+    self.selection.tableView = nil;
 }
 
 - (void)viewWillLayoutSubviews {
@@ -68,7 +74,7 @@
 
 	if (!self.didFirstLayout) {
 		self.didFirstLayout = YES;
-		[self.tableView scrollToRowAtIndexPath:_selection.checkedItem
+		[self.tableView scrollToRowAtIndexPath:self.selection.checkedIndexPath
 							  atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
 		[self.tableView flashScrollIndicators];
 	}
@@ -82,24 +88,29 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_currentSpecifier multipleValuesCount];
+    return [self.currentSpecifier multipleValuesCount];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return [_currentSpecifier footerText];
+    return [self.currentSpecifier footerText];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell   = [tableView dequeueReusableCellWithIdentifier:kCellValue];
-    NSArray *titles         = [_currentSpecifier multipleTitles];
-    NSArray *iconNames      = [_currentSpecifier multipleIconNames];
+	NSArray *titles         = self.currentSpecifier.multipleTitles;
+	NSArray *iconNames      = self.currentSpecifier.multipleIconNames;
 	
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellValue];
     }
 
-    [_selection updateSelectionInCell:cell indexPath:indexPath];
-
+    [self.selection updateSelectionInCell:cell indexPath:indexPath];
+	UIColor *textColor = [UILabel appearanceWhenContainedInInstancesOfClasses:@[UITableViewCell.class]].textColor;
+	if (textColor == nil) {
+		textColor = [UILabel appearance].textColor;
+	}
+	cell.textLabel.textColor = textColor;
+    
     @try {
         [[cell textLabel] setText:[self.settingsReader titleForId:[titles objectAtIndex:indexPath.row]]];
         if ((NSInteger)iconNames.count > indexPath.row) {
@@ -116,11 +127,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [_selection selectRowAtIndexPath:indexPath];
-}
-
-- (CGSize)preferredContentSize {
-    return [[self view] sizeThatFits:CGSizeMake(320, 2000)];
+    [self.selection selectRowAtIndexPath:indexPath];
 }
 
 @end

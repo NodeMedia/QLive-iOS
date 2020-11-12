@@ -1,0 +1,1 @@
+../../../InAppSettingsKit/InAppSettingsKit/Models/IASKSettingsStoreInMemory.h

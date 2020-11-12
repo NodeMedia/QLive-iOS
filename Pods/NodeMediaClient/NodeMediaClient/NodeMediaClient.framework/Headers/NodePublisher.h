@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 #define AUDIO_PROFILE_LCAAC     0           //LC-AAC
 #define AUDIO_PROFILE_HEAAC     1           //HE-AAC
@@ -50,11 +51,17 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 
 @end
 
+@protocol NodePublisherVideoSampleDelegate
+
+- (CVImageBufferRef)didOutputVideoSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+
+@end
 
 @class UIView;
 @interface NodePublisher : NSObject
 
 @property (nullable, nonatomic, weak) id<NodePublisherDelegate> nodePublisherDelegate;
+@property (nullable, nonatomic, weak) id<NodePublisherVideoSampleDelegate> nodePublisherVideoSampleDelegate;
 
 ///音视频直播流地址
 @property (nonnull, nonatomic, strong) NSString *outputUrl;
@@ -104,9 +111,6 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 ///是否开启背景音降噪
 @property (nonatomic, assign) BOOL denoiseEnable;
 
-///是否开启回音消除,只在SPEEX编码下生效 (Acoustic Echo Cancellation)
-@property (nonatomic, assign) BOOL aecEnable DEPRECATED_ATTRIBUTE;
-
 ///是否开启动态码率调整
 @property (nonatomic, assign) BOOL dynamicRateEnable;
 
@@ -145,10 +149,10 @@ typedef void (^CapturePictureBlock)(UIImage * _Nullable image);
 //截图
 -(void) capturePicture:(CapturePictureBlock _Nonnull)capturePictureBlock;
 
-///开始播放
+///开始推流
 -(int) start;
 
-///停止播放
+///停止推流
 -(int) stop;
 
 @end
