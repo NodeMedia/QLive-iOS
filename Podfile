@@ -7,5 +7,5 @@ target 'QLive' do
 
   # Pods for QLive
   pod 'InAppSettingsKit'
-  pod 'NodeMediaClient', '~> 2.8.10' 
+  pod 'NodeMediaClient', '~> 2.9.1' 
 end

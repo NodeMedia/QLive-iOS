@@ -5,14 +5,14 @@
 ## 创建 Podfile 文件
 ```ruby
 # Uncomment the next line to define a global platform for your project
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'QLive' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_modular_headers!
 
   # Pods for QLive
-  pod 'NodeMediaClient', '~> 2.8.9' 
+  pod 'NodeMediaClient', '~> 2.9.1' 
 end
 
 ```
@@ -96,11 +96,11 @@ pod install
 * 支持RTMP/HTTP-FLV视频解密播放
 
 ## NodePublisher
-* H.264/AAC 组合的RTMP协议音视频流发布
+* H.264/H.265+AAC 组合的RTMP协议音视频流发布
 * 全屏视频采集，1080p原画质缩放
 * NEON指令集优化H.264软件编码器，性能强劲，兼容性极强
 * H.264支持Baseline, Main, High profile
-* iOS8以上支持视频硬编码
+* 支持H.264,H.265视频硬编码
 * 支持手机旋转,横屏16:9，竖屏9:16分辨率自动输出横竖屏视频流
 * 支持4:3分辨率,1:1分辨率输出
 * NEON优化AAC软件编码器，极少CPU占用，支持LC和HE profile，音质还原效果好

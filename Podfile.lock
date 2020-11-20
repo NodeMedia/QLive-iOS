@@ -1,10 +1,10 @@
 PODS:
-  - InAppSettingsKit (3.1.5)
-  - NodeMediaClient (2.8.9)
+  - InAppSettingsKit (3.1.8)
+  - NodeMediaClient (2.9.1)
 
 DEPENDENCIES:
   - InAppSettingsKit
-  - NodeMediaClient (~> 2.8.9)
+  - NodeMediaClient (~> 2.9.1)
 
 SPEC REPOS:
   trunk:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - NodeMediaClient
 
 SPEC CHECKSUMS:
-  InAppSettingsKit: 557981c98b711a21232384e0fb36b1c63ff5731d
-  NodeMediaClient: aa54b0dcfdb6980ea032078e22283a9d550c8469
+  InAppSettingsKit: 1a3d473c1b8e36e44eb54a7ddbf25bb00823ae4a
+  NodeMediaClient: 87bdf1d1fb283e27f2f7d4c1e6cb783dc64fc96c
 
-PODFILE CHECKSUM: dfadc39252c87bb407fe44a51bf8b2e59abb8476
+PODFILE CHECKSUM: 59a830f9d6c27ae243e4db07cfb62aa121671a3e
 
 COCOAPODS: 1.10.0

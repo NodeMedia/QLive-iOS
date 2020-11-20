@@ -15,6 +15,7 @@
 #define VIDEO_PROFILE_BASELINE  0           //H.264 Baseline profile
 #define VIDEO_PROFILE_MAIN      1           //H.264 Main profile
 #define VIDEO_PROFILE_HIGH      2           //H.264 High profile
+#define VIDEO_PROFILE_HEVC_MAIN 3           //H.265 Main profile
 
 #define CAMERA_BACK             0           //后置摄像头
 #define CAMERA_FRONT            1           //前置摄像头

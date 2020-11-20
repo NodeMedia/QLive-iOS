@@ -136,6 +136,7 @@
 				<string>H.264 Baseline</string>
 				<string>H.264 Main</string>
 				<string>H.264 High</string>
+                <string>H.265 Main</string>
 			</array>
 			<key>Title</key>
 			<string>Video Profile</string>
@@ -144,6 +145,7 @@
 				<integer>0</integer>
 				<integer>1</integer>
 				<integer>2</integer>
+                <integer>3</integer>
 			</array>
 			<key>DefaultValue</key>
 			<integer>1</integer>
