@@ -49,7 +49,7 @@ NSString * const IASKSettingChangedNotification = @"IASKAppSettingChangedNotific
 			localizationTable = [plistFilePath.stringByDeletingPathExtension // removes '.plist'
 								 .stringByDeletingPathExtension // removes potential '.inApp'
 								 .lastPathComponent // strip absolute path
-								 stringByReplacingOccurrencesOfString:[self platformSuffixForInterfaceIdiom:UI_USER_INTERFACE_IDIOM()] withString:@""]; // removes potential '~device' (~ipad, ~iphone)
+								 stringByReplacingOccurrencesOfString:[self platformSuffixForInterfaceIdiom:[[UIDevice currentDevice] userInterfaceIdiom]] withString:@""]; // removes potential '~device' (~ipad, ~iphone)
 			if ([self.settingsBundle pathForResource:localizationTable ofType:@"strings"] == nil) {
                 // Could not find the specified localization: use default
                 localizationTable = @"Root";
@@ -153,7 +153,7 @@ NSString * const IASKSettingChangedNotification = @"IASKAppSettingChangedNotific
         newSpecifier.settingsReader = self;
         [newSpecifier sortIfNeeded];
 
-        if (![newSpecifier.userInterfaceIdioms containsObject:@(UI_USER_INTERFACE_IDIOM())]) {
+        if (![newSpecifier.userInterfaceIdioms containsObject:@([[UIDevice currentDevice] userInterfaceIdiom])]) {
             // All specifiers without a matching idiom are ignored in the iOS Settings app, so we will do likewise here.
             // Some specifiers may be seen as containing other elements, such as groups, but the iOS settings app will not ignore the perceived content of those unless their own supported idioms do not fit.
             continue;
@@ -260,10 +260,11 @@ NSString * const IASKSettingChangedNotification = @"IASKAppSettingChangedNotific
 - (nullable NSIndexPath*)indexPathForKey:(NSString *)key {
     for (NSUInteger sectionIndex = 0; sectionIndex < self.dataSource.count; sectionIndex++) {
         NSArray *section = [self.dataSource iaskObjectAtIndex:sectionIndex];
-        for (NSUInteger rowIndex = 0; rowIndex < section.count; rowIndex++) {
+        for (NSInteger rowIndex = 0; (NSUInteger)rowIndex < section.count; rowIndex++) {
             IASKSpecifier *specifier = (IASKSpecifier*)[section objectAtIndex:rowIndex];
             if ([specifier isKindOfClass:[IASKSpecifier class]] && [specifier.key isEqualToString:key]) {
-                NSUInteger correctedRowIndex = rowIndex - [self _sectionHasHeading:sectionIndex];
+                NSInteger headingCorrection = [self _sectionHasHeading:sectionIndex] ? 1 : 0;
+                NSUInteger correctedRowIndex = MAX(0, rowIndex - headingCorrection);
                 return [NSIndexPath indexPathForRow:correctedRowIndex inSection:sectionIndex];
             }
         }
@@ -393,7 +394,7 @@ NSString * const IASKSettingChangedNotification = @"IASKAppSettingChangedNotific
     
     NSArray *extensions = @[@".inApp.plist", @".plist"];
     
-    NSArray *plattformSuffixes = @[[self platformSuffixForInterfaceIdiom:UI_USER_INTERFACE_IDIOM()],
+    NSArray *plattformSuffixes = @[[self platformSuffixForInterfaceIdiom:[[UIDevice currentDevice] userInterfaceIdiom]],
                                    @""];
     
     NSArray *preferredLanguages = [NSLocale preferredLanguages];

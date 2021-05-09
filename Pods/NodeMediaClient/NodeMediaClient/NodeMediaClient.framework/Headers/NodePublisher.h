@@ -11,6 +11,7 @@
 
 #define AUDIO_PROFILE_LCAAC     0           //LC-AAC
 #define AUDIO_PROFILE_HEAAC     1           //HE-AAC
+#define AUDIO_PROFILE_SPEEX     2           //SPEEX
 
 #define VIDEO_PROFILE_BASELINE  0           //H.264 Baseline profile
 #define VIDEO_PROFILE_MAIN      1           //H.264 Main profile

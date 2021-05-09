@@ -976,9 +976,13 @@ CGRect IASKCGRectSwap(CGRect rect);
 		if ([MFMailComposeViewController canSendMail]) {
 			mailViewController.mailComposeDelegate = self;
             _currentChildViewController = mailViewController;
+#if !TARGET_OS_MACCATALYST
             UIStatusBarStyle savedStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+#endif
             [self presentViewController:mailViewController animated:YES completion:^{
+#if !TARGET_OS_MACCATALYST
 			    [UIApplication sharedApplication].statusBarStyle = savedStatusBarStyle;
+#endif
             }];
 			
         } else {
@@ -1197,7 +1201,7 @@ CGRect IASKCGRectSwap(CGRect rect);
 
 	[self.settingsStore setObject:textView.text forSpecifier:textView.specifier];
 	[[NSNotificationCenter defaultCenter] postNotificationName:kIASKAppSettingChanged
-														object:textView.specifier.key
+														object:self
 													  userInfo:@{(id)textView.specifier.key: textView.text}];
 	
 }

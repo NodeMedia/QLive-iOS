@@ -225,7 +225,7 @@
     Class class = NSClassFromString(className);
     if (!class) {
         // if the class doesn't exist as a pure Obj-C class then try to retrieve it as a Swift class.
-        NSString *appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+        NSString *appName = [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"] stringByReplacingOccurrencesOfString:@" " withString:@"_"];
         NSString *classStringName = [NSString stringWithFormat:@"_TtC%lu%@%lu%@", (unsigned long)appName.length, appName, (unsigned long)className.length, className];
         class = NSClassFromString(classStringName);
     }
@@ -492,16 +492,24 @@
 }
 
 - (NSArray *)userInterfaceIdioms {
+    NSMutableDictionary *idiomMap = [NSMutableDictionary dictionaryWithDictionary:
+                                     @{
+                                         @"Phone": @(UIUserInterfaceIdiomPhone),
+                                         @"Pad": @(UIUserInterfaceIdiomPad),
+                                     }];
+    if (@available(iOS 14.0, *)) {
+        idiomMap[@"Mac"] = @(UIUserInterfaceIdiomMac);
+    }
+    
     NSArray *idiomStrings = _specifierDict[kIASKSupportedUserInterfaceIdioms];
     if (idiomStrings.count == 0) {
-        return @[@(UIUserInterfaceIdiomPhone), @(UIUserInterfaceIdiomPad)];
+        return [idiomMap allValues];
     }
     NSMutableArray *idioms = [NSMutableArray new];
     for (NSString *idiomString in idiomStrings) {
-        if ([idiomString isEqualToString:@"Phone"]) {
-            [idioms addObject:@(UIUserInterfaceIdiomPhone)];
-        } else if ([idiomString isEqualToString:@"Pad"]) {
-            [idioms addObject:@(UIUserInterfaceIdiomPad)];
+        id idiom = idiomMap[idiomString];
+        if (idiom != nil){
+            [idioms addObject:idiom];
         }
     }
     return idioms;
