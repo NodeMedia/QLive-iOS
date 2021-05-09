@@ -446,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 131;
-				DEVELOPMENT_TEAM = 4XJ98G8FF6;
+				DEVELOPMENT_TEAM = KH9H8WF8C5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QLive/Frameworks",
@@ -459,7 +459,7 @@
 					"$(PROJECT_DIR)/QLive",
 				);
 				MARKETING_VERSION = 1.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.kklive;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.qlive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,7 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 131;
-				DEVELOPMENT_TEAM = 4XJ98G8FF6;
+				DEVELOPMENT_TEAM = KH9H8WF8C5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QLive/Frameworks",
@@ -485,7 +485,7 @@
 					"$(PROJECT_DIR)/QLive",
 				);
 				MARKETING_VERSION = 1.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.kklive;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.nodemedia.qlive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
